@@ -80,7 +80,9 @@ export default function Home() {
 
                 axios
                   .post("/api/register", user)
-                  .then(() => {})
+                  .then(({ data }) => {
+                    console.log(data);
+                  })
                   .catch(() => {});
                 console.log(user);
               }}
